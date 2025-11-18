@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Blood Bank Admin Dashboard</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Blood Bank Admin Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- Sidebar -->
-<div class="sidebar">
-    <h2>Admin Panel</h2>
-    <a onclick="loadSection('branchwise')">Branch-wise Inventory</a>
-    <a onclick="loadSection('groupwise')">Group-wise Inventory</a>
-    <a onclick="loadSection('donations')">All Donations</a>
-    <a onclick="loadSection('donorcounts')">Donor Donation Count</a>
-    <a onclick="loadSection('hospital')">Hospital Requests</a>
-    <a onclick="loadSection('expiry')">Expiring Units</a>
-    <a onclick="loadSection('transfused')">Transfused Units</a>
-</div>
-
-<!-- Main Content -->
-<div class="content">
-    <div id="main-section" class="section">
-        <h3>Welcome Admin</h3>
-        <p>Select an option from the left panel to load data.</p>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Admin Panel</h2>
+        <a onclick="loadSection('branchwise')">Branch-wise Inventory</a>
+        <a onclick="loadSection('groupwise')">Group-wise Inventory</a>
+        <a onclick="loadSection('donations')">All Donations</a>
+        <a onclick="loadSection('donorcounts')">Donor Donation Count</a>
+        <a onclick="loadSection('hospital')">Hospital Requests</a>
+        <a onclick="loadSection('expiry')">Expiring Units</a>
+        <a onclick="loadSection('transfused')">Transfused Units</a>
+        <a onclick="showAddDonor()">Add New Donor</a>
+        <a onclick="showAddDonation()">Add Donation (Existing Donor)</a>
     </div>
-</div>
 
-<script src="script.js"></script>
+    <!-- Main Content -->
+    <div class="content">
+        <div id="main-section" class="section">
+            <h3>Welcome Admin</h3>
+            <p>Select an option from the left panel to load data.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
