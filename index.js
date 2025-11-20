@@ -5,7 +5,7 @@ import cors from "cors"
 const app = express();
 app.use(express.json());
 app.use(cors({
-  origin: "http://127.0.0.1:3000",
+  origin: "http://127.0.0.1:3001",
   credentials: true
 }))
 const db = mysql.createConnection({
@@ -88,6 +88,15 @@ app.get("/main-inventory-groupwise", (req, res) => {
     res.status(200).json(result);
   });
 });
+
+app.get("/expiring-units", (req, res) => {
+  db.query("SELECT * FROM expired_units", (err, result) => {
+    if (err) throw err;
+    res.json(result);
+  });
+});
+
+
 
 app.get("/donation-numbers", (req, res) => {
   const sql = "SELECT * FROM donor_all_donation";
